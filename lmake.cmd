@@ -77,7 +77,7 @@ for %%A in (%*) do (
   Call :titles Building %%A. . .
   for /L %%D in (1,1,!_build[%%A][0]!) do (
     for /F "tokens=1* delims=:" %%I in ("!_build[%%A][%%D]!") do (
-      >nul robocopy "%%~I" "build\%%~J" /E /COPY:DT /DCOPY:DT -XF Thumbs.db todo.txt preview.pdn
+      >nul robocopy "%%~I" "build\%%~J" /E /COPY:DT /DCOPY:DT -XF Thumbs.db todo.txt preview.pdn plugins_setup.rb plugins_setup_dev.rb
     )
   )
   Call :titled
@@ -139,4 +139,4 @@ if "%ComTitle%" == "" (
   title %ComSpec%
 ) else title %ComTitle%
 exit /B
-::::: sig=2f184801908edda81dd4af0264c4eb78561db4a559500b114eb003d909d8489b70a953f7a596e36628410f8e5ad26b99f00ca83ca9068b21678611c00bd7bce4 :::::
+::::: sig=cf3a025389483d65bf61ed0d16bbadeb673af46bb0cb7680804390a87367f7bd88bc6d6361d4b01cde18a27ba6cfd9b3bcc3fe9dcb739905d848af5526c7d361 :::::
