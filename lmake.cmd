@@ -23,7 +23,7 @@ if [%~1] EQU [] goto :help
 goto :end
 
 :pause
-echo/
+echo.
 echo Press any key to exit. . .
 >nul pause
 echo.
@@ -108,26 +108,26 @@ Call :titled
 goto :EOF
 
 :help
-echo/
+echo.
 echo Syntax:
-echo/
+echo.
 echo %~n0 ^<command^> [paramters]
-echo/
-echo ÿ^<command^>ÿ=ÿIs required and can be any of the following:
-echo ÿÿÿÿhelpÿÿÿÿÿÿÿÿÿÿÿ=ÿShows this screen. ^(Default if no command^)
-echo ÿÿÿÿupdateÿÿÿÿÿÿÿÿÿ=ÿDownload^/Update configured project from github. [Do this first if there is not a local copy of the project]
-echo ÿÿÿÿbuild [target]ÿ=ÿBuilds the specified in target. Valid targets are: !_targets! all
-echo ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿTarget all is special and will build all other targets at once.
-echo ÿÿÿÿdistÿÿÿÿÿÿÿÿÿÿÿ=ÿCreates distributions for all built targets.
-echo ÿÿÿÿreleaseÿÿÿÿÿÿÿÿ=ÿBuild and creates distribution files for all targets.
-echo ÿÿÿÿcleanÿÿÿÿÿÿÿÿÿÿ=ÿDeletes all builds and distributions.
-echo/
-echo ÿÿÿNote:
-echo ÿÿÿÿÿÿThe following apps are required for everything to work:
-echo/
-echo ÿÿÿÿÿÿRoboCopy [included with Windows], Git and 7-Zip
-echo/
-echo ÿÿÿÿÿÿMake sure that they are installed before using any commands.
+echo.
+echo  ^<command^> = Is required and can be any of the following:
+echo     help           = Shows this screen. ^(Default if no command^)
+echo     update         = Download^/Update configured project from github. [Do this first if there is not a local copy of the project]
+echo     build [target] = Builds the specified in target. Valid targets are: !_targets! all
+echo                      Target all is special and will build all other targets at once.
+echo     dist           = Creates distributions for all built targets.
+echo     release        = Build and creates distribution files for all targets.
+echo     clean          = Deletes all builds and distributions.
+echo.
+echo    Note:
+echo       The following apps are required for everything to work:
+echo.
+echo       RoboCopy [included with Windows], Git and 7-Zip
+echo.
+echo       Make sure that they are installed before using any commands.
 echo.
 Call :pause
 goto :end
